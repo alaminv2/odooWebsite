@@ -1,0 +1,8 @@
+.blog_row{
+    background-color: rgb(223, 255, 255);
+}
+
+.blog-card {
+    margin: 1rem;
+    border: 2px solid green;
+}
