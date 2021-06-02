@@ -1,8 +1,68 @@
-.blog_row{
-    background-color: rgb(223, 255, 255);
+body {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 
-.blog-card {
-    margin: 1rem;
-    border: 2px solid green;
+.title_text {
+    width: 75%;
+    margin: auto;
+    position: relative;
+    font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    display: block;
+}
+
+#line_1 {
+    padding: 10px 15px 10px 15px;
+    display: inline-block;
+    position: relative;
+}
+
+#line_1::before {
+    content: "";
+    position: absolute;
+    top: 44%;
+    left: calc(100% - 15px);
+    width: 60px;
+    height: 2px;
+    background: black;
+    z-index: 2;
+}
+
+#line_1::after {
+    content: "";
+    position: absolute;
+    top: 44%;
+    right: calc(100% - 15px);
+    width: 60px;
+    height: 2px;
+    background: black;
+    z-index: 2;
+}
+
+#line_2 {
+    padding: 10px 15px 10px 15px;
+    display: inline-block;
+    position: relative;
+}
+
+#line_2::before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 100%;
+    width: 40px;
+    height: 2px;
+    background: black;
+    z-index: 2;
+}
+
+#line_2::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    right: 100%;
+    width: 40px;
+    height: 2px;
+    background: black;
+    z-index: 2;
 }
