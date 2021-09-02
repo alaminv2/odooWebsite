@@ -5,382 +5,363 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./product_selection.css">
     <title>Select Product</title>
 </head>
 
 <body>
     <section>
-        <div class="container-fluid mt-2 p-4">
-            <p class="text-center page_heading">Select Food</p>
+        <div class="container-fluid mt-1">
             <div class="row">
                 <div class="col-md-4 left_section">
                     <div class="row cart pt-2">
-                        <div class="col-md-12">
-                            <h3>Cart Items</h3>
-                            <div class="row cart_item">
-                                <div class="col-md-3 cart_item_pic">
-                                    <img class="img-fluid rounded" width="100%" src="./Chicken Curry Sandwich.jpeg" alt="">
-                                </div>
-                                <div class="col-md-9 cart_item_info">
-                                    <div>
-                                        <p class="name">Chicken Curry Sandwich</p>
-                                        <p class="price">BDT 3.0</p>
-                                    </div>
-                                    <div>
-                                        <strong><p class="quantity">1 Units at BDT 3.0 / Unit</p></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row cart_item">
-                                <div class="col-md-3 cart_item_pic">
-                                    <img class="img-fluid rounded" width="100%" src="./Lunch_maki.jpg" alt="">
-                                </div>
-                                <div class="col-md-9 cart_item_info">
-                                    <div>
-                                        <p class="name">Lunch Maki taki tuki sushi salmon 18pc</p>
-                                        <p class="price">BDT 12.0</p>
-                                    </div>
-                                    <div>
-                                        <strong><p class="quantity">3 Units at BDT 12.0 / Unit</p></strong>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="cart_container" class="col-md-12">
 
-                            <div class="row cart_item">
-                                <div class="col-md-3 cart_item_pic">
-                                    <img class="img-fluid rounded" width="100%" src="./Lunch Salmon.jpg" alt="">
-                                </div>
-                                <div class="col-md-9 cart_item_info">
-                                    <div>
-                                        <p class="name">Lunch Salmon 20pc</p>
-                                        <p class="price">BDT 13.8</p>
-                                    </div>
-                                    <div>
-                                        <strong><p class="quantity">2 Units at BDT 13.8 / Unit</p></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row cart_item">
-                                <div class="col-md-3 cart_item_pic">
-                                    <img class="img-fluid rounded" width="100%" src="./Chicken Curry Sandwich.jpeg" alt="">
-                                </div>
-                                <div class="col-md-9 cart_item_info">
-                                    <div>
-                                        <p class="name">Chicken Curry Sandwich</p>
-                                        <p class="price">BDT 3.0</p>
-                                    </div>
-                                    <div>
-                                        <strong><p class="quantity">1 Units at BDT 3.0 / Unit</p></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row cart_item">
-                                <div class="col-md-3 cart_item_pic">
-                                    <img class="img-fluid rounded" width="100%" src="./Lunch_maki.jpg" alt="">
-                                </div>
-                                <div class="col-md-9 cart_item_info">
-                                    <div>
-                                        <p class="name">Lunch Maki taki tuki sushi salmon 18pc</p>
-                                        <p class="price">BDT 12.0</p>
-                                    </div>
-                                    <div>
-                                        <strong><p class="quantity">3 Units at BDT 12.0 / Unit</p></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row cart_item">
-                                <div class="col-md-3 cart_item_pic">
-                                    <img class="img-fluid rounded" width="100%" src="./Lunch Salmon.jpg" alt="">
-                                </div>
-                                <div class="col-md-9 cart_item_info">
-                                    <div>
-                                        <p class="name">Lunch Salmon 20pc</p>
-                                        <p class="price">BDT 13.8</p>
-                                    </div>
-                                    <div>
-                                        <strong><p class="quantity">2 Units at BDT 13.8 / Unit</p></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row cart_item">
-                                <div class="col-md-3 cart_item_pic">
-                                    <img class="img-fluid rounded" width="100%" src="./Lunch Salmon.jpg" alt="">
-                                </div>
-                                <div class="col-md-9 cart_item_info">
-                                    <div>
-                                        <p class="name">Lunch Salmon 20pc</p>
-                                        <p class="price">BDT 13.8</p>
-                                    </div>
-                                    <div>
-                                        <strong><p class="quantity">2 Units at BDT 13.8 / Unit</p></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row cart_item">
-                                <div class="col-md-3 cart_item_pic">
-                                    <img class="img-fluid rounded" width="100%" src="./Lunch_maki.jpg" alt="">
-                                </div>
-                                <div class="col-md-9 cart_item_info">
-                                    <div>
-                                        <p class="name">Lunch Maki taki tuki sushi salmon 18pc</p>
-                                        <p class="price">BDT 12.0</p>
-                                    </div>
-                                    <div>
-                                        <strong><p class="quantity">3 Units at BDT 12.0 / Unit</p></strong>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="row proceed">
-                        <button class="btn btn-success text-center">Proceed</button>
+                        <button id="proceed_btn" class="btn text-center"><i class="fas fa-arrow-alt-circle-right fa-5x"></i></button>
                     </div>
+
                 </div>
                 <div class="col-md-8 right_section">
+
+                    <nav class="navbar sticky-top navbar-expand-lg">
+                        <a class="navbar-brand" href="#">CloudCafe</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Pizza</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Pasta</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Vegiterian</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Sushi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                     <div class="row product_list">
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-md-9">
-                                            <p class="product_name">Chicken Curry Sandwich</p>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <p class="product_price">BDT 993.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 01</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">01</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Lunch Salmon.jpg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Launch Salmon 20pc</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 250.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 02</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">02</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Lunch_maki.jpg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Launch shushi maki 18pc</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 475.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 03</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">03</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Chicken Curry Sandwich</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 993.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 04</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">04</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Lunch Salmon.jpg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Launch Salmon 20pc</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 250.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 05</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">05</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Lunch_maki.jpg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Launch shushi maki 18pc</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 475.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 06</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">06</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Chicken Curry Sandwich</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 993.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 07</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">07</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Lunch Salmon.jpg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Launch Salmon 20pc</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 250.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 08</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">08</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Lunch_maki.jpg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Launch shushi maki 18pc</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 475.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 09</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">09</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Chicken Curry Sandwich</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 993.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 10</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">10</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Lunch Salmon.jpg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Launch Salmon 20pc</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 250.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 11</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">11</div>
                             </a>
                         </div>
 
-                        <div class="col-md-3 mt-2 product">
+                        <div class="col-md-2 mt-2 product">
                             <a href="#" class="add_to_cart">
-                                <div class="product_pic">
-                                    <img src="./Lunch_maki.jpg" class="img-fluid rounded" alt="">
-                                </div>
-                                <div class="product_info">
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <p class="product_name">Launch shushi maki 18pc</p>
-                                        </div>
-                                        <div class="col-3">
-                                            <p class="product_price">BDT 475.0&#2547;</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 12</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">12</div>
                             </a>
                         </div>
 
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 13</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">13</div>
+                            </a>
+                        </div>
 
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 14</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">14</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 15</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">15</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 16</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">16</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 17</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">17</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 18</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">18</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 19</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">19</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 20</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">20</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 21</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">21</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 22</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">22</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 23</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">23</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 24</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">24</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 25</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">25</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 26</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">26</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 27</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">27</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 28</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">28</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 29</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">29</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 30</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">30</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Chicken Curry Sandwich.jpeg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 31</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">31</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch Salmon.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 32</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">32</div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 mt-2 product">
+                            <a href="#" class="add_to_cart">
+                                <img src="./Lunch_maki.jpg" class="img-fluid rounded" height="img-fluid" alt="">
+                                <div class="name">Food item 33</div>
+                                <div class="price">BDT <span>35.0</span> tk</div>
+                                <div class="p_id" style="display:none;">33</div>
+                            </a>
+                        </div>
                     </div>
-
                 </div>
+
             </div>
+        </div>
         </div>
     </section>
 
 
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./product_selection.js"></script>
 </body>
 
