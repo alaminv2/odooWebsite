@@ -1,0 +1,18 @@
+#my_login_btn {
+    padding: 5px 40px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #DC3545;
+    outline: none;
+    box-shadow: 0px 0px 10px .1px white;
+    transition: .3s;
+}
+
+#my_login_btn:hover {
+    color: #fff;
+    border: 1px solid #DC3545;
+    background: rgba(23, 26, 29, 0.8);
+    transition: .3s;
+}
