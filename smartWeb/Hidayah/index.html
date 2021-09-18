@@ -25,6 +25,10 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <!-- For team carousel -->
+    <link href="assets/vendor/owl_carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/owl_carousel/owl.theme.default.min.css" rel="stylesheet">
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/my_style.css" rel="stylesheet">
@@ -51,52 +55,89 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link  scrollto" href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
+                            <li><a href="#">COMPANY PROFILE</a></li>
+                            <li><a href="#">CHAIRMAN AND MD'S MESSAGE</a></li>
+                            <li><a href="#">MANAGEMENT TEAM</a></li>
+                            <li><a href="#">MISSION, VISION & CORE VALUES</a></li>
+                            <li><a href="#">AWARDS AND ACCERDITATION</a></li>
+                            <li><a href="#">CSR</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li class="dropdown"><a href="#"><span>Business Area</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">ICT Products Sale & Distribution</a></li>
+                            <li><a href="#">Complete Printing Solution Provider</a></li>
+                            <li><a href="#">JV For Data Center Equipment</a></li>
+                            <li><a href="#">Engineering And Construction Entity</a></li>
+                            <li><a href="#">Air Condition Emport, Distribution And Service Entity</a></li>
+                            <li><a href="#">ICT & Electronics Service Support Provider</a></li>
+                            <li><a href="#">Software Development</a></li>
+                            <li><a href="#">Stationary Items Distribution</a></li>
+                            <li><a href="#">AGRO</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>CONCERNS</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Smart Technologies (BD) Ltd</a></li>
+                            <li><a href="#">UniSoft Systems Limited</a></li>
+                            <li><a href="#">Eerna Limited</a></li>
+                            <li><a href="#">Smart Printing Solutions Ltd</a></li>
+                            <li><a href="#">Shipsmart Data Technologies</a></li>
+                            <li><a href="#">Smart Properties Limited</a></li>
+                            <li><a href="#">Fresco EME Limited</a></li>
+                            <li><a href="#">1000fix Services Ltd</a></li>
+                            <li><a href="#">Global Office Automation Limited</a></li>
+                            <li><a href="#">Digital Equipment Limited</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>MEDIA CENTER</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">News and Events</a></li>
+                            <li><a href="#">Image Gallery</a></li>
+                            <li><a href="#">Video Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="#hero">CLIENTS</a></li>
+                    <li><a class="nav-link" href="#hero">FINANCER</a></li>
+                    <li><a class="nav-link" href="#hero">CAREER</a></li>
+                    <li><a class="nav-link" href="#hero">CONTACT</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
-            <!-- <a href="#" class="btn bg-danger">Login</a> -->
-            <button type="button" id="my_login_btn" data-toggle="modal" data-target="#myLoginForm">Login</button>
             <!-- My Modal -->
-            <div id="myLoginForm" class="modal fade" role="dialog">
+            <button type="button" id="my_login_btn" data-bs-toggle="modal" data-bs-target="#myLoginForm">Login</button>
+            <div class="modal fade" id="myLoginForm">
                 <div class="modal-dialog">
-
-                    <!-- Modal content-->
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Some text in the modal.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="row">
+                            <div class="col form_col">
+                                <h1>Login</h1>
+                                <div id="modal_err_msg" class="err_msg"></div>
+                                <form id="modal_login_form">
+                                    <!-- <input type="hidden" name="csrf_token" value="request.csrf_token()" /> -->
+                                    <div class=" form_element ">
+                                        <input type="hidden" name="db" id="db" required="required" readonly="readonly" value="DemoDB">
+                                    </div>
+                                    <div class=" form_element">
+                                        <label for="login_mail">Email</label>
+                                        <input type="text" name="login" id="login_mail" placeholder="Enter email">
+                                    </div>
+                                    <div class="form_element">
+                                        <label for="login_pass ">Password</label>
+                                        <input type="password" name="password" id="login_pass" placeholder="Enter password">
+                                    </div>
+                                    <div class="form_element">
+                                        <a href="# ">Forget Password ?</a>
+                                    </div>
+                                    <div class="form_element">
+                                        <button type="button" id="modal_login_btn">Login</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- My Modal End -->
@@ -114,36 +155,77 @@
             <div class="carousel-inner" role="listbox">
 
                 <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
+                <div class="carousel-item active" style="background-image: url(assets/img/slide/smart.jpg)">
                     <div class="carousel-container">
                         <div class="container">
-                            <h2 class="animated fadeInDown">Welcome to <span>Hidayah</span></h2>
-                            <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et
-                                tempore modi architecto.</p>
-                            <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                            <h2 class="animated fadeInDown"><span style="font-weight: 300;">Welcome to</span> <span>Smart Technologies (BD) Ltd</span></h2>
+                            <p class="animated fadeInUp">Largest IT Distributor Company in Bangladesh.</p>
+                            <a href="#" class="btn-get-started animated fadeInUp scrollto">Read More</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
+                <div class="carousel-item" style="background-image: url(assets/img/slide/unisoft.jpg)">
                     <div class="carousel-container">
                         <div class="container">
-                            <h2 class="animated fadeInDown">Lorem Ipsum Dolor</h2>
-                            <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et
-                                tempore modi architecto.</p>
+                            <h2 class="animated fadeInDown">Unisoft Systems Limited</h2>
+                            <p class="animated fadeInUp">Innovative Software Solutions.</p>
                             <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
+                <div class="carousel-item" style="background-image: url(assets/img/slide/eerna.jpg)">
                     <div class="carousel-container">
                         <div class="container">
-                            <h2 class="animated fadeInDown">Sequi ea ut et est quaerat</h2>
-                            <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et
-                                tempore modi architecto.</p>
+                            <h2 class="animated fadeInDown">Eerna Limited</h2>
+                            <p class="animated fadeInUp">Customer’s First Choice.</p>
+                            <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/properties.png)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animated fadeInDown">Smart Properties Limited</h2>
+                            <p class="animated fadeInUp">Introduces New Era Of Architecture.</p>
+                            <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/printing.jpg)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animated fadeInDown">Smart Printing Solutions Ltd.</h2>
+                            <p class="animated fadeInUp">A New Dimension Of Technology.</p>
+                            <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/1000fix.jpg)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animated fadeInDown">1000fix Services Ltd</h2>
+                            <p class="animated fadeInUp">A Complete Fixer To All Your IT Problems.</p>
+                            <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/stationary.jpg)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animated fadeInDown">The Leading Stationery Distributor</h2>
+                            <p class="animated fadeInUp">Global Office Automation Ltd.</p>
                             <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
                         </div>
                     </div>
@@ -162,108 +244,56 @@
     </section>
     <!-- End Hero -->
 
+    <!-- main -->
     <main id="main">
 
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container-fluid">
 
-                <div class="row justify-content-center">
-                    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
-                    </div>
+                <div class="section-title">
+                    <h2>About</h2>
+                    <h3>All about <span>Smart Group</span></h3>
+                </div>
 
-                    <div class="col-xl-5 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-                        <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-                        <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit
-                            aut voluptate.</p>
-
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                <div id="about" class="about-area area-padding">
+                    <div class="container">
+                        <div class="row">
+                            <!-- single-well start-->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="well-left">
+                                    <div class="single-well">
+                                        <a href="#">
+                                            <img src="assets/img/slide/smart.jpg" class="img-fluid rounded" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single-well end-->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="well-middle">
+                                    <div class="single-well">
+                                        <h4 class="sec-head">Welcome to our <span>Smart Family</span></h4>
+                                        <p>In 1998 Smart Group set foot in Bangladesh ICT market as Smart Technologies (BD) Ltd providing technology solutions. Going through enormous challenges and exceptional business strategy Smart Group achieved its reputed
+                                            sustainable position nationally and internationally.</p>
+                                        <p>Starting from a seed, Smart Family is now a large tree with several branches providing shade and support to millions. When so many companies face it difficult to sustain a long-term business, we, the Smarts proved
+                                            to be the Dark Horse running front line with business innovations and out of box thinking.</p>
+                                        <p>We uphold our highest quality and professional service to maintain customer satisfaction and be loyal to our clients and partners. As a fast-driven company, Smart Group upgrade, change and improvise with the market
+                                            need and nourish its position in the industry.</p>
+                                        <p>Apart from ICT product distributions, over the years with business expansion Smart Group consistently involves in other business arenas such as printing solutions, construction and engineering, retail chain shop,
+                                            software development, stationery item distribution, agriculture, education etc.</p>
+                                        <p>Today Smart Group is flourishing with more than 1800 employees, 2000 partners, 72 brands, 28 branches and many more to go.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End col-->
                         </div>
-
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-gift"></i></div>
-                            <h4 class="title"><a href="">Nemo Enim</a></h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                        </div>
-
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-atom"></i></div>
-                            <h4 class="title"><a href="">Dine Pad</a></h4>
-                            <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
-                        </div>
-
                     </div>
                 </div>
 
             </div>
         </section>
         <!-- End About Section -->
-
-        <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills">
-            <div class="container-fluid">
-
-                <div class="row justify-content-center skills-content">
-
-                    <div class="col-xl-5 col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill">HTML <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">CSS <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">JavaScript <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-xl-5 col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill">PHP <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Photoshop <i class="val">55%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Skills Section -->
 
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts section-bg">
@@ -272,23 +302,23 @@
                 <div class="row counters">
 
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Clients</p>
+                        <span data-purecounter-start="0" data-purecounter-end="1800" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Employee</p>
                     </div>
 
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Projects</p>
+                        <span data-purecounter-start="0" data-purecounter-end="2000" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Partners</p>
                     </div>
 
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Hours Of Support</p>
+                        <span data-purecounter-start="0" data-purecounter-end="83" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Brands</p>
                     </div>
 
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Hard Workers</p>
+                        <span data-purecounter-start="0" data-purecounter-end="29" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Branches</p>
                     </div>
 
                 </div>
@@ -304,233 +334,385 @@
                 <div class="section-title">
                     <h2>Services</h2>
                     <h3>Check our <span>Services</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+                    <p>We have a wide assortment of IT-solutions and a high IT-knowledge with one purpose, to help our customers to stay in the forefront.</p>
                 </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-xl-10">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 icon-box">
-                                <div class="icon"><i class="ri-pie-chart-line"></i></div>
-                                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-8.php" target="_blank"><img src="./assets/img/services/service_08.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Software Development</h4>
+                                    <p>In the recent years, the company has invested heavily on the research and development (R&D)</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-8.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 icon-box">
-                                <div class="icon"><i class="ri-stack-line"></i></div>
-                                <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3">
+                                <a href="https://www.smartgroup.com.bd/business-area-1.php" target="_blank"><img src="./assets/img/services/service_01.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">ICT Products Sales And Distribution</h4>
+                                    <p>We are one of the leading ICT company in Bangladesh successfully completed large.</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-1.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 icon-box">
-                                <div class="icon"><i class="ri-markup-line"></i></div>
-                                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-2.php" target="_blank"><img src="./assets/img/services/service_02.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">ICT Retail Chain Shop</h4>
+                                    <p>This retail chain shop has several branches all over the country with exceptional IT products and eventually.</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-2.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 icon-box">
-                                <div class="icon"><i class="ri-shape-line"></i></div>
-                                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-3.php" target="_blank"><img src="./assets/img/services/service_03.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Complete Printing Solution Provider</h4>
+                                    <p>We gather immense reputation in distribution of IT product & services through the</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-3.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 icon-box">
-                                <div class="icon"><i class="ri-fingerprint-line"></i></div>
-                                <h4 class="title"><a href="">Nemo Enim</a></h4>
-                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-4.php" target="_blank"><img src="./assets/img/services/service_04.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">JV For Data Center Equipment</h4>
+                                    <p>To carry on the business of establishing and setting up Hi-Tech Park, Electronics &</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-4.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 icon-box">
-                                <div class="icon"><i class="ri-body-scan-line"></i></div>
-                                <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-5.php" target="_blank"><img src="./assets/img/services/service_05.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Engineering And Construction Entity</h4>
+                                    <p>We are passionate about providing cost effective and holistic solution for our clients</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-5.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-6.php" target="_blank"><img src="./assets/img/services/service_06.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Air Condition Import, Distribution & Service Entity</h4>
+                                    <p>The company is now able to satisfy the specifications of the largest construction</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-6.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-7.php" target="_blank"><img src="./assets/img/services/service_07.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">ICT & Electronics Service Support Provider</h4>
+                                    <p>This is one of the largest Repairing service providing company and business wings of</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-7.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-9.php" target="_blank"><img src="./assets/img/services/service_09.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Stationary Item Distribution</h4>
+                                    <p>This is one of the leading stationery distribution companies with a product portfolio offering world-class products.</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-9.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-4 mb-5">
+                            <div class="card rounded-3 hover-shadow">
+                                <a href="https://www.smartgroup.com.bd/business-area-10.php" target="_blank"><img src="./assets/img/services/service_10.jpg" alt="" class="card-img-top rounded"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Agro Farm</h4>
+                                    <p>We believe to go for farming automation technology and with this belief the farm has</p>
+                                    <a href="https://www.smartgroup.com.bd/business-area-10.php" target="_blank" class="btn btn-sm btn-warning">Read More <b>>></b></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- End Services Section -->
 
-        <!-- ======= Cta Section ======= -->
-        <section id="cta" class="cta">
-            <div class="container">
-
-                <div class="text-center">
-                    <h3>Call To Action</h3>
-                    <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <a class="cta-btn" href="#">Call To Action</a>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Cta Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        <!-- ======= Concern Section ======= -->
+        <section id="concerns" class="concerns">
             <div class="container-fluid">
 
                 <div class="section-title">
-                    <h2>Portfolio</h2>
-                    <h3>Check our <span>Portfolio</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+                    <h2>Concerns</h2>
+                    <h3>Check out our <span>Concerns</span></h3>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
+                        <ul id="concern-flters">
+                            <li class="concern_btn filter-active" data-filter="*">Smart</li>
+                            <li class="concern_btn" data-filter=".filter-card">Unisoft</li>
+                            <li class="concern_btn" data-filter=".filter-web">Eerna</li>
+                            <li class="concern_btn" data-filter=".filter-web">Printing</li>
+                            <li class="concern_btn" data-filter=".filter-web">1000Fix</li>
+                            <li class="concern_btn" data-filter=".filter-web">Fresco</li>
+                            <li class="concern_btn" data-filter=".filter-web">Properties</li>
+                            <li class="concern_btn" data-filter=".filter-web">Shipsmart</li>
+                            <li class="concern_btn" data-filter=".filter-web">Global</li>
+                            <li class="concern_btn" data-filter=".filter-web">Digital</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="row portfolio-container justify-content-center">
-
-                    <div class="col-xl-10">
-                        <div class="row">
-
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>App 1</h4>
-                                        <p>App</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                <div class="brand_details">
+                    <div class="container">
+                        <div class="row concern_info" style="">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/slide/smart.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Smart Technologies (BD) Ltd</h1>
+                                        <p>In 1998 Smart Group set foot in Bangladesh ICT market as Smart Technologies (BD) Ltd providing technology solutions. Going through enormous challenges and exceptional business strategy Smart Group achieved its reputed
+                                            sustainable position nationally and internationally.</p>
+                                        <p>Starting from a seed, Smart Family is now a large tree with several branches providing shade and support to millions. When so many companies face it difficult to sustain a long-term business, we, the Smarts proved
+                                            to be the Dark Horse running front line with business innovations and out of box thinking.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
-
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-web">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Web 3</h4>
-                                        <p>Web</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="https://www.smartgroup.com.bd/company-profile.php" class="concrn_rd_mr">Read More <b>>>></b></a>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
 
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>App 2</h4>
-                                        <p>App</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                            </div>
+                        </div>
+
+                        <div class="row concern_info">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/concern/unisoft_02.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Unisoft Systems Limited</h1>
+                                        <p>Unisoft™ has been in the full life-cycle software development since 2000.</p>
+                                        <p>Develops ERP, POS, VAT management & customized solutions for local & international markets.</p>
+                                        <p>A large team of extremely talented & experienced professionals and We work to meet the rigid standards of quality.</p>
+                                        <p>Unisoft™ is a concern of SMART Technologies BD Ltd. the largest ICT distribution company in Bangladesh.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
-
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-card">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Card 2</h4>
-                                        <p>Card</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="http://uslbd.com/About#/carousel-slider" class="concrn_rd_mr">Read More <b>>>></b></a>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
 
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-web">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Web 2</h4>
-                                        <p>Web</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                            </div>
+                        </div>
+
+                        <div class="row concern_info">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/concern/eerna_02.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Eerna Limited</h1>
+                                        <p>The Online Shopping Mall in Bangladesh, where customers will have the same experience in offline what customers used to get in online shopping. Eerna is a new e-commerce platform across the nationwide by offering
+                                            a fast, secure and convenient online shopping experience with a broad product offering in categories ranging from fashion, consumer electronics to household goods, toys and sports equipment and what not. Eerna
+                                            is always striving to offer its customers the best possible offering – including multiple payment options, free returns and extensive customer service and warranty commitments. Eerna online shopping is a sister
+                                            concern of Smart Technologies BD Limited.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
-
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>App 3</h4>
-                                        <p>App</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="https://eerna.com/about-us" class="concrn_rd_mr">Read More <b>>>></b></a>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
 
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-card">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Card 1</h4>
-                                        <p>Card</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                            </div>
+                        </div>
+
+                        <div class="row concern_info">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/concern/printing_02.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Smart Printing Solutions Ltd</h1>
+                                        <p>Smart Printing Solution Ltd (SPSL) is one of the leading printing distributing companies in Bangladesh. Since the inception of the journey in 2014, SPSL is driving to gather immense reputation in distribution of
+                                            IT product & services through the nationwide business partners. SPSL always treats the customers as business partner & tries to satisfy them by providing the World best products as well as ensure the profitability
+                                            & productivity of their investment. Through cooperation with major international companies and continuous research of the Bangladesh market has been established within a short period of time among the largest
+                                            companies of the field. with Ameri-Tek Document Solutions is different.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
-
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-card">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Card 3</h4>
-                                        <p>Card</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="https://smartprinting-bd.com/mission-statement/index.html" class="concrn_rd_mr">Read More <b>>>></b></a>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
 
-                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-web">
-                                <div class="portfolio-wrap">
-                                    <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Web 3</h4>
-                                        <p>Web</p>
-                                        <div class="portfolio-links">
-                                            <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                        </div>
+                            </div>
+                        </div>
+
+                        <div class="row concern_info">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/concern/1000fix_02.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">1000Fix Services Ltd</h1>
+                                        <p>1000FiX Services Ltd. is one of the largest service providers of IT & Consumer electronics products in Bangladesh, registered in 29 August 2017. We offer a complete service solution of all kinds of IT Gadgets, Home
+                                            Appliances, Commercial Appliances and also enable various service for Corporate customers , OEM & ODM companies as well. We are the Service partner of Smart technologies (BD) Ltd. Since 1998, we have been providing
+                                            ICT Based service and solutions to our valuable clients.</p>
+                                        <p>Our professionals are skilled to provide several types service those we are covered for customers and Business requirements. We help our clients to achieve better, faster, more sustainable, affordable service that
+                                            consistently produce win to win situation for the company and customers.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End portfolio item -->
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="https://www.1000fix.com/pages/about" class="concrn_rd_mr">Read More <b>>>></b></a>
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
+
+                        <div class="row concern_info ">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/concern/fresco.jpeg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Fresco EME Limited</h1>
+                                        <p>Established in 2015, Fresco EME Limited is today considerably wellknown design build HVAC solutions provider with a range of products. The company is now able to satisfy the specifications of the largest construction
+                                            projects from residential to commercial and industrial building/factory/facilities. </p>
+                                        <p>Our design and product selection process takes into account many factors including the cooling capacities required, inbuilt energy saving devices that can be used to benefit the environment and the level of air-conditioned
+                                            comfort experienced in the building.</p>
+                                        <p>The highly motivated and dedicated team at FRESCO provides our Customers with a service steeped throughout in professionalism and quality, starting with the placement of the order right through to the delivery of
+                                            the finished air conditioning & ventilation products.</p>
+                                    </div>
+                                </div>
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="https://smartgroup.com.bd/fresco-eme-limited.php" class="concrn_rd_mr">Read More <b>>>></b></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row concern_info">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/concern/1000fix_02.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Smart Properties Limited</h1>
+                                        <p>Smart Properties Limited as a sister Concern of Smart Group has been established as a real estate company and it emerge within a very short span of time as one of the Dynamic Developers in specializing in superior
+                                            quality residential as well as commercial developments within Dhaka city. Our traditional business model is based on the accomplishment of properties in the real estate market.</p>
+                                        <p>We give personal attention to the details of building design, construction and turnkey basis project construction work, while providing day-to-day hands-on management. We specialize in the Development of joint venture
+                                            Corporate Commercial and Residential Building complexes. We always ensure the building meets or exceeds client expectations.</p>
+                                    </div>
+                                </div>
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="https://www.smartpropertiesbd.com/about-spl.php" class="concrn_rd_mr">Read More <b>>>></b></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row concern_info">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/slide/smart.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Shipsmart Data Technologies</h1>
+                                        <p>China-Bangladesh jointly owned Ship-Smart Data Technology (Bangladesh) Co., Limited is going to set up a high-tech data connecting cable manufacturing industry in Chattogram EPZ to cope up with advancing of Digital
+                                            Bangladesh. A new product is going to be added to the made in EPZ products and export baskets of the country.</p>
+                                        <p>Ship-Smart Data Technology (Bangladesh) Co., Limited is 100% export oriented Data & Network cable Industry for the purpose of manufacturing of various kinds data or network cables, wires and overhead conductors
+                                            and business of manufacturer, trader, buyer, seller, agent, importers, exporters, dealers, distributor and retail in all kinds of aluminum, cables, copper cables, silicon cables, optical fiber cables, power
+                                            cables, rubber cables, railway signaling cables, welding cables and jelly-field cables, automobiles cables, submersible cables, coaxial cables, flexible and house wiring cables (single and multicore) and all
+                                            other kinds of electrical, electronic, tele-communication cables and wires and other products & items related thereon.</p>
+                                    </div>
+                                </div>
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="https://www.smartgroup.com.bd/shipsmart-data-technologies.php" class="concrn_rd_mr">Read More <b>>>></b></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row concern_info">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/concern/goal.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Global Office Automation Limited</h1>
+                                        <p>Global Office Automation Limited (hereafter, GOAL) started its journey in 2005 as a limited company under company act 1994. It has grown rapidly since then and many people are involved in sales and marketing, of
+                                            Dhaka city at Begum Rokeya Sharani, West Kafrul, Dhaka-1216. With the endeavor of the staff, co-staff, and associates, GOAL has become one of the lead IT peripherals suppliers in Bangladesh.</p>
+                                        <p>GOAL has years of experience in the fields of importing and distributing. The basic function of GOAL is to source, market & Sales All Microsoft Software at domestic and overseas markets.</p>
+                                        <p>GOAL has all the necessary experience, knowledge, and capital to ensure the success of its suppliers. Major of its clientele are Government and Non-Government Offices, Private offices, different projects in Bangladesh
+                                            Government (GoB) offices.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <a target="_blank" href="https://www.smartgroup.com.bd/global-office-automation-limited.php" class="concrn_rd_mr">Read More <b>>>></b></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row concern_info">
+                            <div class="col-md-6 col-sm-6 col-xs-12 brand_pic">
+                                <img src="./assets/img/concern/digital.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 ">
+                                <div class="row">
+                                    <div class="col brand_info">
+                                        <h1 class="brand_name">Digital Equipment Limited</h1>
+                                        <p>Digital Equipment Limited started its journey in 2001 as a limited company under company act 1994. It has grown rapidly since then and many people are involved in sales and marketing, of Dhaka city at South Yakub
+                                            Centre, Mirpur Rd, Dhaka 1205. With the endeavor of the staff, co-staff, and associates, Digital Equipment has become one of the lead IT peripherals suppliers in Bangladesh.</p>
+                                        <p>Digital Equipment has years of experience in the fields of importing and distributing. The basic function of Digital Equipment is to source, market & Sales at domestic and overseas markets.</p>
+                                    </div>
+                                </div>
+                                <div class="row cncrn_rd_mr_div">
+                                    <div class="col">
+                                        <a target="_blank" href="https://digitalequipment.com.bd/#about" class="concrn_rd_mr">Read More <b>>>></b></a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-
                 </div>
 
             </div>
         </section>
-        <!-- End Portfolio Section -->
+        <!-- End Concern Section -->
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials section-bg">
@@ -559,7 +741,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- End testimonial-item -->
 
                             <div class="col-lg-6">
                                 <div class="testimonial-item mt-4 mt-lg-0">
@@ -573,7 +754,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- End testimonial-item -->
 
                             <div class="col-lg-6">
                                 <div class="testimonial-item mt-4">
@@ -587,7 +767,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- End testimonial-item -->
 
                             <div class="col-lg-6">
                                 <div class="testimonial-item mt-4">
@@ -601,7 +780,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- End testimonial-item -->
 
                             <div class="col-lg-6">
                                 <div class="testimonial-item mt-4">
@@ -615,7 +793,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- End testimonial-item -->
 
                             <div class="col-lg-6">
                                 <div class="testimonial-item mt-4">
@@ -629,7 +806,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <!-- End testimonial-item -->
 
                         </div>
                     </div>
@@ -645,97 +821,678 @@
 
                 <div class="section-title">
                     <h2>Team</h2>
-                    <h3>Our Hard Working <span>Team</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+                    <h3>Our Expert & Inspirational <span>Team</span></h3>
+                    <p>We have a people’s driven culture and invest as much in our employees as we do in our projects. Our team consists of the most passionate and skilled people. We care about providing expertise and exceptional service whenever you need
+                        it and for us it is vital and together we make it happen!.</p>
+                </div>
+                <!-- Team Carousel -->
+                <div class="container team_carousel">
+                    <div class="row">
+                        <div class="owl-carousel owl-theme">
+                            <div class="member">
+                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Mohd. Mazharul Islam </h4>
+                                        <span>Chairman</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Mohammad Zahirul Islam</h4>
+                                        <span>Managing Director</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>SM Mohibul Hasan</h4>
+                                        <span>Deputy Managing Director</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Zafor Ahmed </h4>
+                                        <span>Director</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team_5.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Shahed Kamal</h4>
+                                        <span>Director</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team_6.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Muzahid Al Beruni Suzon</h4>
+                                        <span>Director</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team_7.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>SK Hasan Fahim</h4>
+                                        <span>Director</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team_8.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Abul Bashar Mohammad</h4>
+                                        <span>General Manager</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team_9.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Md. Zakir Hossain</h4>
+                                        <span>General Manager</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team_10.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>A K M Shafiq-Ul-Haque</h4>
+                                        <span>General Manager</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member">
+                                <img src="assets/img/team/team_11.jpg" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Forhad Hossain</h4>
+                                        <span>General Manager & CFO</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Team Carousel End -->
+            </div>
+        </section>
+        <!-- End Team Section -->
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Portfolio</h2>
+                    <h3>Our <span>Portfolio</span></h3>
+                    <p>In a career of 22 years, Smart Group has successfully pioneered the development of Several businesses in Bangladesh. Our innovative ideas, tireless efforts, perseverance and dedication contributed to our successful achievements.</p>
                 </div>
 
-                <div class="row justify-content-center">
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-corsair">Corsair</li>
+                            <li data-filter=".filter-dell">dell</li>
+                            <li data-filter=".filter-eerna">eerna</li>
+                            <li data-filter=".filter-hp">hp</li>
+                            <li data-filter=".filter-huawei">huawei</li>
+                            <li data-filter=".filter-kasper">kaspersky</li>
+                            <li data-filter=".filter-logitech">logitech</li>
+                            <li data-filter=".filter-microsoft">microsoft</li>
+                            <li data-filter=".filter-special">special day</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container justify-content-center">
+
                     <div class="col-xl-10">
                         <div class="row">
-
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="member">
-                                    <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                                    <div class="member-info">
-                                        <div class="member-info-content">
-                                            <h4>Walter White</h4>
-                                            <span>Chief Executive Officer</span>
-                                        </div>
-                                        <div class="social">
-                                            <a href=""><i class="bi bi-twitter"></i></a>
-                                            <a href=""><i class="bi bi-facebook"></i></a>
-                                            <a href=""><i class="bi bi-instagram"></i></a>
-                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <!-- FOR CORSAIR -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-corsair">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/corsair-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>CORSAIR LAUNCHING PROGRAM</h4>
+                                        <!-- <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/corsair-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CORSAIR LAUNCHING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FOR DELL -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-dell">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/dell-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>DELL 'PRESIDENTS CIRCLE' AWARD</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/dell-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DELL 'PRESIDENTS CIRCLE' AWARD"><i class="bx bx-plus"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Member Item -->
 
-                            <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
-                                <div class="member">
-                                    <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                                    <div class="member-info">
-                                        <div class="member-info-content">
-                                            <h4>Sarah Jhonson</h4>
-                                            <span>Product Manager</span>
-                                        </div>
-                                        <div class="social">
-                                            <a href=""><i class="bi bi-twitter"></i></a>
-                                            <a href=""><i class="bi bi-facebook"></i></a>
-                                            <a href=""><i class="bi bi-instagram"></i></a>
-                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-dell">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/dell-2.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>DELL 'PRESIDENTS CIRCLE' AWARD</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/dell-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DELL 'PRESIDENTS CIRCLE' AWARD"><i class="bx bx-plus"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Member Item -->
 
-                            <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
-                                <div class="member">
-                                    <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                                    <div class="member-info">
-                                        <div class="member-info-content">
-                                            <h4>William Anderson</h4>
-                                            <span>CTO</span>
-                                        </div>
-                                        <div class="social">
-                                            <a href=""><i class="bi bi-twitter"></i></a>
-                                            <a href=""><i class="bi bi-facebook"></i></a>
-                                            <a href=""><i class="bi bi-instagram"></i></a>
-                                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-dell">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/dell-3.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>DELL 'PRESIDENTS CIRCLE' AWARD</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/dell-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DELL 'PRESIDENTS CIRCLE' AWARD"><i class="bx bx-plus"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Member Item -->
 
-                            <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
-                                <div class="member">
-                                    <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                                    <div class="member-info">
-                                        <div class="member-info-content">
-                                            <h4>Amanda Jepson</h4>
-                                            <span>Accountant</span>
-                                        </div>
-                                        <div class="social">
-                                            <a href=""><i class="bi bi-twitter"></i></a>
-                                            <a href=""><i class="bi bi-facebook"></i></a>
-                                            <a href=""><i class="bi bi-instagram"></i></a>
-                                            <a href=""><i class="bi bi-linkedin"></i></a>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-dell">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/dell-4.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>DELL 'PRESIDENTS CIRCLE' AWARD</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/dell-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DELL 'PRESIDENTS CIRCLE' AWARD"><i class="bx bx-plus"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Member Item -->
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-dell">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/dell-5.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>DELL TECHNOLOGIES SOLUTION</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/dell-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DELL TECHNOLOGIES SOLUTION"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-dell">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/dell-6.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>DELL TECHNOLOGIES SOLUTION</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/dell-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DELL TECHNOLOGIES SOLUTION"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-dell">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/dell-7.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>DELL LAUNCHING PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/dell-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DELL LAUNCHING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FOR Eerna -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-eerna">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/eerna-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>EERNA BRANCH OPENING PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/eerna-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="EERNA BRANCH OPENING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-eerna">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/eerna-2.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>EERNA BRANCH OPENING PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/eerna-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="EERNA BRANCH OPENING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-eerna">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/eerna-3.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>EERNA BRANCH OPENING PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/eerna-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="EERNA BRANCH OPENING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-eerna">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/eerna-4.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>EERNA BRANCH OPENING PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/eerna-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="EERNA BRANCH OPENING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- For HP -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-hp">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/hp-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HP LAUNCHING PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/hp-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HP LAUNCHING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-hp">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/hp-2.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HP PRESS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/hp-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HP PRESS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-hp">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/hp-3.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HP PRESS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/hp-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HP PRESS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-hp">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/hp-4.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HPE PARTNERS & PRESS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/hp-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HPE PARTNERS & PRESS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-hp">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/hp-5.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HPE PARTNERS & PRESS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/hp-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HPE PARTNERS & PRESS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-hp">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/hp-6.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HPE PARTNERS & PRESS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/hp-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HPE PARTNERS & PRESS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- For Huawei -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-huawei">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/huawei-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HUAWEI PARTNERS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/huawei-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HUAWEI PARTNERS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-huawei">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/huawei-2.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HUAWEI PARTNERS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/huawei-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HUAWEI PARTNERS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-huawei">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/huawei-3.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HUAWEI PARTNERS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/huawei-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HUAWEI PARTNERS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-huawei">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/huawei-4.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HUAWEI PARTNERS MEET</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/huawei-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HUAWEI PARTNERS MEET"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-huawei">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/huawei-5.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>TOGETHER TOWARDS INFINITY</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/huawei-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="TOGETHER TOWARDS INFINITY"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-huawei">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/huawei-6.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HUAWEI TRAINING CAMP</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/huawei-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HUAWEI TRAINING CAMP"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-huawei">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/huawei-7.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>HUAWEI TRAINING CAMP</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/huawei-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="HUAWEI TRAINING CAMP"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- For Kaspersky -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-kasper">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/kasper-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>LOYALTY REWARD PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/kasper-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="LOYALTY REWARD PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-kasper">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/kasper-2.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>MEET THE PRESS</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/kasper-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="LOYALTY REWARD PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- For Logitech -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-logitech">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/logitech-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>KNOWLEDGE SHARING PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="KNOWLEDGE SHARING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-logitech">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/logitech-2.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>KNOWLEDGE SHARING PROGRAM</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="KNOWLEDGE SHARING PROGRAM"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- For Microsoft -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-microsoft">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/microsoft-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>MICROSOFT CSP EVENT</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/microsoft-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="MICROSOFT CSP EVENT"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-microsoft">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/microsoft-2.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>MICROSOFT CSP EVENT</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/microsoft-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="MICROSOFT CSP EVENT"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-microsoft">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/microsoft-3.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>MICROSOFT CSP EVENT</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/microsoft-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="MICROSOFT CSP EVENT"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- For Specia Day -->
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-special">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/womens-day-1.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>INTERNATIONAL WOMEN'S DAY</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/womens-day-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="INTERNATIONAL WOMEN'S DAY"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-special">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/womens-day-2.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>INTERNATIONAL WOMEN'S DAY</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/womens-day-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="INTERNATIONAL WOMEN'S DAY"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-special">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/womens-day-3.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>INTERNATIONAL WOMEN'S DAY</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/womens-day-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="INTERNATIONAL WOMEN'S DAY"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-special">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/portfolio/womens-day-4.jpg" class="img-fluid rounded-3" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>INTERNATIONAL WOMEN'S DAY</h4>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/womens-day-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="INTERNATIONAL WOMEN'S DAY"><i class="bx bx-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
+
                 </div>
 
             </div>
         </section>
-        <!-- End Team Section -->
+        <!-- End Portfolio Section -->
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact section-bg">
@@ -922,8 +1679,41 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
+    <!-- For team carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/vendor/owl_carousel/owl.carousel.min.js"></script>
+
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/my_js.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: ['<div class="owl_nav_btn">></div>', '<div class="owl_nav_btn">></div>'],
+            autoplay: true,
+            autoplayTimeout: 5000,
+            smartSpeed: 1000,
+            dots: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 2,
+                    nav: false
+                },
+                1000: {
+                    items: 3,
+                    nav: true,
+                    loop: true
+                }
+            }
+        })
+    </script>
 
 </body>
 

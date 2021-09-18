@@ -1,24 +1,21 @@
-$(window, document, undefined).ready(function() {
+window.addEventListener('load', () => {
+    var item_container = document.querySelector('.item_container')
+        // console.log(item_containers);
+    var item_isotop = new Isotope(item_container, { itemSelector: '.item' });
+    console.log('isotope = ', item_isotop)
 
-    $('.input').blur(function() {
-        var $this = $(this);
-        if ($this.val())
-            $this.addClass('used');
-        else
-            $this.removeClass('used');
+    var items = document.querySelectorAll('.item_filters li')
+    console.log('items = ', items);
+    items.forEach(el => {
+        el.addEventListener('click', () => {
+            items.forEach(element => {
+                element.style.background = 'transparent';
+            });
+            el.style.background = '#DC3545';
+            console.log('class = ', el.getAttribute('data-fliter'))
+            item_isotop.arrange({
+                filter: el.getAttribute('data-fliter')
+            })
+        });
     });
-
-});
-
-
-$('#tab1').on('click', function() {
-    $('#tab1').addClass('login-shadow');
-    $('#tab2').removeClass('signup-shadow');
-});
-
-$('#tab2').on('click', function() {
-    $('#tab2').addClass('signup-shadow');
-    $('#tab1').removeClass('login-shadow');
-
-
 });

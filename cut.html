@@ -11,148 +11,57 @@
 </head>
 
 <body>
-    <!-- Button trigger modal -->
     <div class="container">
-        <br>
-        <center>
-            <button class="btn btn-primary btn-lg" href="#signup" data-bs-toggle="modal" data-bs-target=".log-sign">Sign In/Register</button>
-        </center>
-        <br>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-
-                <div class="bs-example bs-example-tabs">
-                    <ul id="myTab" class="nav nav-tabs">
-                        <li id="tab1" class=" active tab-style login-shadow "><a href="#signin" data-bs-toggle="tab">Log In</a></li>
-                        <li id="tab2" class=" tab-style "><a href="#signup" data-bs-toggle="tab">Sign Up</a></li>
-
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <div id="myTabContent" class="tab-content">
-
-                        <div class="tab-pane fade active in" id="signin">
-                            <form class="form-horizontal">
-                                <fieldset>
-                                    <!-- Sign In Form -->
-                                    <!-- Text input-->
-
-                                    <div class="group">
-                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
-                                        <label class="label" for="date">Email address</label></div>
-
-
-                                    <!-- Password input-->
-                                    <div class="group">
-                                        <input required="" class="input" type="password"><span class="highlight"></span><span class="bar"></span>
-                                        <label class="label" for="date">Password</label>
-                                    </div>
-                                    <em>minimum 6 characters</em>
-
-                                    <div class="forgot-link">
-                                        <a href="#forgot" data-bs-toggle="modal" data-target="#forgot-password"> I forgot my password</a>
-                                    </div>
-
-
-                                    <!-- Button -->
-                                    <div class="control-group">
-                                        <label class="control-label" for="signin"></label>
-                                        <div class="controls">
-                                            <button id="signin" name="signin" class="btn btn-primary btn-block">Log In</button>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-
-
-                        <div class="tab-pane fade" id="signup">
-                            <form class="form-horizontal">
-                                <fieldset>
-                                    <!-- Sign Up Form -->
-                                    <!-- Text input-->
-                                    <div class="group">
-                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
-                                        <label class="label" for="date">First Name</label></div>
-
-                                    <!-- Text input-->
-                                    <div class="group">
-                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
-                                        <label class="label" for="date">Last Name</label></div>
-
-                                    <!-- Password input-->
-                                    <div class="group">
-                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
-                                        <label class="label" for="date">Email</label></div>
-
-                                    <!-- Text input-->
-                                    <div class="group">
-                                        <input required="" class="input" type="password"><span class="highlight"></span><span class="bar"></span>
-                                        <label class="label" for="date">Password</label></div>
-                                    <em>1-8 Characters</em>
-
-                                    <div class="group2">
-                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
-                                        <label class="label" for="date">Country</label></div>
-
-
-
-                                    <!-- Button -->
-                                    <div class="control-group">
-                                        <label class="control-label" for="confirmsignup"></label>
-                                        <div class="controls">
-                                            <button id="confirmsignup" name="confirmsignup" class="btn btn-primary btn-block">Sign Up</button>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col d-flex justifu-content-center">
+                <ul class="item_filters" style="cursor: pointer;">
+                    <li data-fliter="*">All</li>
+                    <li data-fliter=".filter-web">web</li>
+                    <li data-fliter=".filter-app">app</li>
+                    <li data-fliter=".filter-chat">chat</li>
+                    <li data-fliter=".filter-ios">IOS</li>
+                    <li data-fliter=".filter-flip">Z-flip</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row item_container justify-content-center">
+            <div class="col-3 item bg-info m-2 filter-flip">
+                flip_1 (0)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-web">
+                web-1 (1)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-app">
+                app_1 (2)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-chat">
+                chat_1 (3)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-chat">
+                chat_2 (4)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-app">
+                app_2 (5)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-app">
+                app_3 (6)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-ios">
+                ios_1 (7)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-flip">
+                flip_2 (8)
+            </div>
+            <div class="col-3 item bg-info m-2 filter-ios">
+                ios_2 (9)
             </div>
         </div>
     </div>
 
-
-
-    <!--modal2-->
-
-    <div class="modal fade bs-modal-sm" id="forgot-password" tabindex="0" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Password will be sent to your email</h4>
-                </div>
-                <div class="modal-body">
-                    <form class="form-horizontal">
-                        <fieldset>
-                            <div class="group">
-                                <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
-                                <label class="label" for="date">Email address</label></div>
-
-
-                            <div class="control-group">
-                                <label class="control-label" for="forpassword"></label>
-                                <div class="controls">
-                                    <button id="forpasswodr" name="forpassword" class="btn btn-primary btn-block">Send</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="./cut.js"></script>
 </body>
 

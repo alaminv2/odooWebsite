@@ -1,18 +1,108 @@
-#my_login_btn {
-    padding: 5px 40px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    background: #DC3545;
-    outline: none;
-    box-shadow: 0px 0px 10px .1px white;
-    transition: .3s;
-}
-
-#my_login_btn:hover {
-    color: #fff;
-    border: 1px solid #DC3545;
-    background: rgba(23, 26, 29, 0.8);
-    transition: .3s;
-}
+    .modal-content {
+        background: rgba(23, 26, 29, 0);
+    }
+    
+    .modal-content .row {
+        background: rgba(23, 26, 29, .9);
+        box-shadow: 0px 0px 10px white;
+        border-radius: 10px;
+    }
+    
+    .form_col {
+        margin: auto;
+        padding: 2rem;
+        /* border: 1px solid #DC3545; */
+        color: white;
+        text-align: center;
+    }
+    
+    .form_col h1 {
+        margin-bottom: 20px;
+    }
+    
+    .form_col .err_msg {
+        color: #DC3545;
+        font-weight: bold;
+        padding: 10px 0px;
+        border-radius: 10px;
+    }
+    
+    .form_element {
+        margin: 40px auto;
+    }
+    
+    .form_element label {
+        font-size: 1.15rem;
+        margin-left: 20px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .form_element input {
+        display: block;
+        width: 70%;
+        padding: 5px 20px;
+        border-radius: 25px;
+        font-size: 1rem;
+        margin: auto;
+        transition: .3s;
+        border: none;
+        outline: none;
+    }
+    
+    .form_element input:focus {
+        width: 90%;
+        transition: .3s;
+    }
+    
+    #my_login_btn,
+    #modal_login_btn {
+        padding: 5px 40px;
+        border-radius: 5px;
+        color: white;
+        font-weight: 600;
+        font-size: 1rem;
+        background: #DC3545;
+        border: 1px solid #DC3545;
+        outline: none;
+        box-shadow: 0px 0px 10px .1px rgba(255, 255, 255, .7);
+        transition: .3s;
+    }
+    
+    #my_login_btn:hover,
+    #modal_login_btn:hover {
+        color: #fff;
+        border: 1px solid #DC3545;
+        background: rgba(23, 26, 29, 0.8);
+        transition: .3s;
+    }
+    
+    .modal-backdrop {
+        display: none;
+    }
+    
+    .target_div_test {
+        background: burlywood;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .target_div_test::before {
+        content: "";
+        position: absolute;
+        border-top: 150px solid burlywood;
+        border-right: 150px solid transparent;
+        left: 0;
+        bottom: -100px;
+    }
+    
+    .target_div_test::after {
+        content: "";
+        position: absolute;
+        border-top: 150px solid burlywood;
+        border-left: 150px solid transparent;
+        right: 0;
+        left: auto;
+        bottom: -100px;
+    }
