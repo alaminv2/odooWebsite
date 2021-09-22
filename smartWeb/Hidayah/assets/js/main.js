@@ -45,6 +45,7 @@
      */
     let navbarlinks = select('#navbar .scrollto', true)
     const navbarlinksActive = () => {
+        console.log('navabar inks activesdf   01')
         let position = window.scrollY + 200
         navbarlinks.forEach(navbarlink => {
             if (!navbarlink.hash) return
@@ -80,6 +81,7 @@
     let preloader = select('#preloader');
     if (preloader) {
         window.addEventListener('load', () => {
+            console.log('navabar inks activesdf   02')
             preloader.remove()
         });
     }
@@ -90,6 +92,7 @@
     let backtotop = select('.back-to-top')
     if (backtotop) {
         const toggleBacktotop = () => {
+            console.log('navabar inks activesdf   03')
             if (window.scrollY > 100) {
                 backtotop.classList.add('active')
             } else {
@@ -141,6 +144,7 @@
      * Scroll with ofset on page load with hash links in the url
      */
     window.addEventListener('load', () => {
+        console.log('navabar inks activesdf   04')
         if (window.location.hash) {
             if (select(window.location.hash)) {
                 scrollto(window.location.hash)
@@ -186,6 +190,7 @@
 
     /* Porfolio isotope and filter */
     window.addEventListener('load', () => {
+        console.log('navabar inks activesdf   05')
         let portfolioContainer = select('.portfolio-container');
         if (portfolioContainer) {
             let portfolioIsotope = new Isotope(portfolioContainer, {

@@ -1346,58 +1346,11 @@ section {
     font-size: 14px;
 }
 
-#footer .footer-newsletter {
-    padding: 50px 0;
-    background: #2e3339;
-}
-
-#footer .footer-newsletter h4 {
-    font-size: 24px;
-    margin: 0 0 10px 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 600;
-}
-
-#footer .footer-newsletter form {
-    margin-top: 30px;
-    background: #fff;
-    padding: 6px 10px;
-    position: relative;
-    border-radius: 4px;
-}
-
-#footer .footer-newsletter form input[type="email"] {
-    border: 0;
-    padding: 4px;
-    width: calc(100% - 100px);
-}
-
-#footer .footer-newsletter form input[type="submit"] {
-    position: absolute;
-    top: -3px;
-    right: -4px;
-    bottom: -3px;
-    border: 0;
-    background: none;
-    font-size: 16px;
-    padding: 0 20px 0 20px;
-    margin: 3px;
-    background: #428bca;
-    color: #fff;
-    transition: 0.3s;
-    border-radius: 0 4px 4px 0;
-}
-
-#footer .footer-newsletter form input[type="submit"]:hover {
-    background: #3071a9;
-}
-
 #footer .footer-top {
     background: #272c30;
     border-top: 1px solid #394047;
     border-bottom: 1px solid #394047;
-    padding: 60px 0 30px 0;
+    padding: 30px 0 30px 0;
 }
 
 #footer .footer-top .footer-info {
@@ -1506,4 +1459,8 @@ section {
     text-align: center;
     font-size: 13px;
     color: #fff;
+}
+
+#footer .footer_logo {
+    padding: 0px 0px 30px 0px;
 }

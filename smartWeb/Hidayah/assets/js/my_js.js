@@ -17,9 +17,12 @@ modalLoginBtn.addEventListener('click', () => {
 
         xhr.onload = (res) => {
             var response = JSON.parse(res.target.response)
-            console.log(response)
+            console.log('response = ', response)
+            alert(response.login_success)
             if (response.login_success) {
-                window.location.href = 'http://0.0.0.0:8069/';
+                // document.cookie = `name=session_id`
+                // console.log('cookie = ', decodeURIComponent(document.cookie))
+                // window.location.href = 'http://0.0.0.0:8069/web#action=107&active_id=mailbox_inbox&cids=1&menu_id=83';
             } else {
                 document.getElementById('modal_err_msg').innerText = response.error;
             }
